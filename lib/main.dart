@@ -23,13 +23,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'FlutterV2',
       initialRoute: '/login',
       routes: {
         '/login': (context) => const LoginPage(),
         '/register': (context) => const RegisterPage(),
-        '/enterInfo': (context) => const EnterInfoPage(),  // Lägg till rutten för EnterInfoPage
-        '/info': (context) => const InfoPage(),            // Lägg till rutten för InfoPage
+        '/enterInfo': (context) => const EnterInfoPage(),
+        '/info': (context) => const InfoPage(),
       },
       onUnknownRoute: (settings) {
         return MaterialPageRoute(builder: (context) => const LoginPage());
